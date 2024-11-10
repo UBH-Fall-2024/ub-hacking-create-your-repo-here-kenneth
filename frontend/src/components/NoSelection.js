@@ -5,7 +5,7 @@ const NoSelection = () => {
                     <h2> Pick your poison </h2>
                 </div>
                 <div className = "d-flex justify-content-center px-2">
-                    <h5> Pick a horror story on the left hand side. As you go down the rabbithole, the stories get scarier ... </h5>
+                    <h5> Pick a horror story on the left hand side. As you go down the rabbithole (top to bottom), the stories get scarier ... </h5>
                 </div>
                 <div className = "d-flex justify-content-center px-4">
                     <h5> You want to spook someone? Add your own stories here.</h5>

@@ -15,8 +15,8 @@ const Publish = () => {
         if (title.length < 8){
             set_error("Titles must be at least 8 characters");
             return;
-        }else if (story.length < 500){
-            set_error("Stories must be at least 500 characters");
+        }else if (story.length < 250){
+            set_error("Stories must be at least 250 characters");
             return;
         } else if (story.length > 3000 || title.length > 100){
             set_error("Story length cannot exceed 3000 characters and title length cannot exceed 100 characters");

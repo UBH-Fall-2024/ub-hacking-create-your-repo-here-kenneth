@@ -13,6 +13,7 @@ router.post("/save", async (req, res) => {
         let {story, title, rank} = req.body;
         const data = await data_collection.findOne({"category": rank});
 
+        title = title.replace(/(<([^>]+)>)/ig, '');
         story = story.replace(/(<([^>]+)>)/ig, '');
 
         const stories = [...data["stories"], {title, story}];
