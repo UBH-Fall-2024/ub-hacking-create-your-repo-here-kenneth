@@ -1,0 +1,17 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url("../public/Alice_in_Wonderland_3.ttf");
+}
+
+* {
+    font-family: myFirstFont;
+    color: white
+}
+
+#nav-text:hover {
+    font-weight: bold;
+    transition: font-weight 1ms;
+    cursor: pointer;
+}
+
+
