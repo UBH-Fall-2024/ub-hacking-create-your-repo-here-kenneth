@@ -8,19 +8,26 @@ import Main from "./pages/Main";
 import Nonexistent from "./pages/Nonexistent";
 import Navbar from "./components/Navbar";
 import Publish from "./pages/Publish";
+import {useState} from "react";
+import UserProfile from "./pages/UserProfile";
 
 
 // style = {{backgroundImage: "url('/bg.jpg')"}}
 
 function App() {
-      return (
+    const [user, set_user] = useState(null);
+
+    console.log(user);
+
+    return (
           <div className = "vh-100 m-0 overflow-hidden" style={{backgroundColor: "#2A2A2A"}}>
               <BrowserRouter>
-                  <Navbar></Navbar>
+                  <Navbar user = {user} set_user={set_user}></Navbar>
                   <Routes>
                       <Route path = "/" element={<Landing />}></Route>
                       <Route path = "/stories" element={<Main />}></Route>
-                      <Route path = "/publish" element={<Publish />}></Route>
+                      <Route path = "/publish" element={<Publish user = {user}/>}></Route>
+                      <Route path = "/myprofile" element={<UserProfile user = {user} />}></Route>
                       <Route path = "*" element={<Nonexistent />}></Route>
                   </Routes>
               </BrowserRouter>

@@ -1,7 +1,7 @@
 import {useState} from "react";
 import Spinner from "./Spinner";
 
-const Modal = ({rank, feedback, handle_click, title, story}) => {
+const Modal = ({rank, feedback, handle_click, title, story, user}) => {
     const [error, set_error] = useState("");
     const [loading, set_loading] = useState(false);
 
@@ -25,7 +25,7 @@ const Modal = ({rank, feedback, handle_click, title, story}) => {
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({rank: score, title: title, story: story})
+            body: JSON.stringify({rank: score, title: title, story: story, user: user})
         });
 
         const data = await response.json();

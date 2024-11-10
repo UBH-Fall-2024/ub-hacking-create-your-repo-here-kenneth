@@ -2,7 +2,7 @@ import {useState} from "react";
 import Modal from "../components/Modal";
 import Spinner from "../components/Spinner";
 
-const Publish = () => {
+const Publish = ({user}) => {
     const [title, set_title] = useState("");
     const [story, set_story] = useState("");
     const [feedback, set_feedback] = useState("");
@@ -18,8 +18,11 @@ const Publish = () => {
         }else if (story.length < 250){
             set_error("Stories must be at least 250 characters");
             return;
-        } else if (story.length > 3000 || title.length > 100){
-            set_error("Story length cannot exceed 3000 characters and title length cannot exceed 100 characters");
+        } else if (story.length > 5000 || title.length > 100){
+            set_error("Story length cannot exceed 5000 characters and title length cannot exceed 100 characters");
+            return;
+        }else if (user === null){
+            set_error("Please sign in");
             return;
         }
 
@@ -51,7 +54,7 @@ const Publish = () => {
     return (
         <>
             {loading && <Spinner />}
-            { fix_bool && <Modal rank = {rank} feedback = {feedback} handle_click={set_fix_bool} story={story} title={title}/>}
+            { fix_bool && <Modal user = {user} rank = {rank} feedback = {feedback} handle_click={set_fix_bool} story={story} title={title}/>}
             <div className="w-100 h-100 px-5 mt-0 pt-0 mt-md-5 pt-md-5">
                 <div className="row w-100 h-100">
                     <div className="col-12 col-md-6 pt-3">
@@ -62,6 +65,9 @@ const Publish = () => {
                             <h5> Our AI will analyze your horror story and automatically rate its scariness on a scale from 1 (least scary) to 5 (most scary).
                                 The AI leverages RAG (Retrieval-Augmented Generation) results from past data to evaluate factors such as suspense,
                                 fear, and tension for an accurate score. </h5>
+                        </div>
+                        <div className="container-fluid d-flex justify-content-center">
+                            <img src = "/quill.gif" width = "50%" height = "50%"></img>
                         </div>
                     </div>
 

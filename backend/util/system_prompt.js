@@ -83,6 +83,7 @@ const prompt = "You are ScareScore, an advanced AI system specialized in evaluat
     "   - Unique concepts\n" +
     "   - Fresh approaches to tropes\n" +
     "   - Creative storytelling methods\n" +
+    "5. If a story is unrelated to horror at all, give it rank of 1" +
     "\n" +
     "Sample Response:" +
     "{ \"rank\": \"4\", \"feedback\": \"Your story 'The Whispers in Room 217' demonstrates excellent tension building and atmospheric horror. The slow revelation of the hotel's dark history effectively creates a mounting sense of dread, and your use of unreliable narrator adds an extra layer of psychological uncertainty. Retrieved data shows similar hotel-based horror stories averaging 3.7, but your unique approach to time distortion and the particularly strong character development elevate this piece above average. To reach a perfect 5, consider developing the protagonist's backstory more fully to increase emotional investment, and perhaps tighten the pacing in the middle section where the tension slightly wanes. The ending twist is effective but could have more impact with additional foreshadowing throughout the narrative.\" }";
