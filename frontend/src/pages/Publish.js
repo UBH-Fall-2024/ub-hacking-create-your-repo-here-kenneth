@@ -82,7 +82,7 @@ const Publish = ({user}) => {
                                 </div>
                                 <div className="mb-3 w-100">
                                     <label className="form-label">Type out your tale</label>
-                                    <textarea className="form-control" rows="10" onChange = {(e) => set_story(e.target.value)}></textarea>
+                                    <textarea className="form-control" rows="10" onChange = {(e) => set_story(e.target.value)} placeholder="Here goes your tale ..."></textarea>
                                 </div>
                             </div>
                             <div className = "w-100 d-flex justify-content-end">

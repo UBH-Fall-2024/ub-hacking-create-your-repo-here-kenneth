@@ -4,7 +4,7 @@ const Landing = () => {
             <div className="h-100 w-100 d-flex justify-content-center align-items-center pb-5" style = {{backgroundColor: "rgb(0, 0, 0, .5)"}}>
                 <div className = "pb-5 mb-5">
                     <h1 className = "d-flex justify-content-center" style = {{fontSize: "50px"}}> Welcome Down The Rabbithole</h1>
-                    <h3 className = "d-flex justify-content-center"> Jump down the rabbithole for your daily dose on horror stories </h3>
+                    <h3 className = "d-flex justify-content-center"> Jump down the rabbithole for your daily dose of horror stories </h3>
                     <div className = "d-flex justify-content-center">
                         <button className = "btn btn-outline-light" onClick = {() => window.location.href = "http://localhost:8080/stories"}> Start reading </button>
                     </div>
